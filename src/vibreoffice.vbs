@@ -447,6 +447,9 @@ Function ProcessModeKey(oEvent)
     dim bMatched
     bMatched = True
     Select Case oEvent.KeyChar
+        Case "0":
+            if oEvent.KeyChar = "0" Then ProcessMovementKey("^")
+            gotoMode("NORMAL")
         ' Insert modes
         Case "i", "a", "I", "A", "o", "O":
             If oEvent.KeyChar = "a" Then getCursor().goRight(1, False)
